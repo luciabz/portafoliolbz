@@ -98,6 +98,11 @@
             </div>
             
             <div class="hero-model">
+                <div id="model-loader" class="model-loader">
+                    <div class="loader-spinner"></div>
+                    <p>[ INITIALIZING NEURAL LINK ]</p>
+                    <p style="font-size: 11px; opacity: 0.7; margin-top: -10px;">ESTABLISHING QUANTUM CONNECTION...</p>
+                </div>
                 <model-viewer 
                     id="hero-model-viewer"
                     src="/sci-fi_computer/scene.gltf" 
@@ -326,5 +331,19 @@
     <script src="contact-starfield.js"></script>
     <script src="translations.js"></script>
     <script src="script.js"></script>
+    
+    <script>
+        // Hide loader when model is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const modelViewer = document.getElementById('hero-model-viewer');
+            const loader = document.getElementById('model-loader');
+            
+            if (modelViewer && loader) {
+                modelViewer.addEventListener('load', function() {
+                    loader.style.display = 'none';
+                });
+            }
+        });
+    </script>
 </body>
 </html>

@@ -424,6 +424,53 @@ model-viewer {
     --progress-bar-color: var(--color-primary);
 }
 
+/* Model Loader */
+.model-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    z-index: 10;
+    font-family: 'VT323', monospace;
+    color: var(--color-primary);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    letter-spacing: 2px;
+    padding: 40px;
+    text-align: center;
+}
+
+.model-loader p {
+    margin: 0;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.model-loader p:last-child {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-top: -20px;
+    letter-spacing: 1px;
+}
+
+.loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--color-primary);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
 /* Sección Acerca de */
 .about {
     padding: 100px 20px;
@@ -788,15 +835,20 @@ model-viewer {
         background: var(--bg-secondary);
         border-bottom: 3px solid var(--color-primary);
         flex-direction: column;
-        padding: 20px;
+        padding: 0;
         gap: 15px;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        visibility: hidden;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
     }
 
     .nav-links.active {
         max-height: 500px;
+        visibility: visible;
+        opacity: 1;
+        padding: 20px;
     }
 
     .nav-link {
@@ -953,15 +1005,20 @@ model-viewer {
         background: var(--bg-secondary);
         border-bottom: 3px solid var(--color-primary);
         flex-direction: column;
-        padding: 15px;
+        padding: 0;
         gap: 10px;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        visibility: hidden;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
     }
 
     .nav-links.active {
         max-height: 400px;
+        visibility: visible;
+        opacity: 1;
+        padding: 15px;
     }
 
     .nav-link {
