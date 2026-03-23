@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lucia Benitez - Web Developer | Retro Portfolio</title>
+    
+    <!-- Fonts Retro -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+    
+    <!-- Model Viewer -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <!-- p5.js para efectos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+</head>
+<body>
+    <!-- NAVBAR RETRO -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">LUCIA.DEV</span>
+                <span class="logo-bracket">]</span>
+            </div>
+            <button class="hamburger-menu" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#hero" class="nav-link">// INICIO</a></li>
+                <li><a href="#projects" class="nav-link">// PROYECTOS</a></li>
+                <li><a href="#skills" class="nav-link">// SKILLS</a></li>
+                <li><a href="#contact" class="nav-link">// CONTACTO</a></li>
+                <li class="language-selector-container">
+                    <select id="language-selector" class="language-selector">
+                        <option value="es">ES</option>
+                        <option value="en">EN</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="terminal-header">
+                    <span class="terminal-title">$ TERMINAL_INIT.EXE</span>
+                    <div class="terminal-buttons">
+                        <span class="btn-min">_</span>
+                        <span class="btn-max">□</span>
+                        <span class="btn-close">×</span>
+                    </div>
+                </div>
+                
+                <div class="terminal-body">
+                    <p class="terminal-line">
+                        <span class="prompt">❯</span>
+                        <span class="typing-text">Welcome to Lucia Benitez Portfolio</span>
+                        <span class="cursor">|</span>
+                    </p>
+                    
+                    <p class="terminal-line">
+                        <span class="prompt">❯</span>
+                        <span class="text-accent">Role:</span> Web Developer
+                    </p>
+                    
+                    <p class="terminal-line">
+                        <span class="prompt">❯</span>
+                        <span class="text-accent">Location:</span> Argentina
+                    </p>
+                    
+                    <p class="terminal-line">
+                        <span class="prompt">❯</span>
+                        <span class="text-accent">Specialization:</span> Frontend & Design
+                    </p>
+                    
+                    <p class="terminal-line empty">
+                        <span class="prompt">❯</span>
+                    </p>
+                    
+                    <p class="terminal-line description">
+                        Creando experiencias digitales innovadoras desde la nostalgia del código retro. 
+                        Apasionada por HTML5, CSS3, JavaScript y diseño responsivo con sabor vintage.
+                    </p>
+                    
+                    <p class="terminal-line empty">
+                        <span class="prompt">❯</span>
+                    </p>
+                    
+                    <button class="btn-terminal btn-contact">
+                        <span class="btn-content">→ ENVIAR MENSAJE</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-model">
+                <model-viewer 
+                    id="hero-model-viewer"
+                    src="./sci-fi_computer/scene.gltf" 
+                    alt="Retro Computer Model"
+                    camera-controls 
+                    auto-rotate
+                    loading="eager"
+                    exposure="1"
+                    style="width: 100%; height: 100%; background: transparent;">
+                </model-viewer>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">// </span>PROYECTOS
+            </h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="card-header">
+                        <span class="card-icon">▥</span>
+                        <span class="card-title">Proyecto 1</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Aplicación web interactiva que demuestra habilidades en JavaScript y diseño responsivo con estética retro.</p>
+                        <div class="tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">→ Ver Proyecto</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-header">
+                        <span class="card-icon">▥</span>
+                        <span class="card-title">Proyecto 2</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Plataforma full-stack con backend integrado, demostrando experiencia en desarrollo completo.</p>
+                        <div class="tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">→ Ver Proyecto</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-header">
+                        <span class="card-icon">▥</span>
+                        <span class="card-title">Proyecto 3</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Aplicación móvil responsiva con características avanzadas y optimización de rendimiento máximo.</p>
+                        <div class="tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">API REST</span>
+                            <span class="tag">PWA</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">→ Ver Proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">// </span>HABILIDADES TÉCNICAS
+            </h2>
+            
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3 class="skill-category">FRONTEND</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-name">HTML5</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">CSS3</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h3 class="skill-category">BACKEND</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-name">Node.js</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Python</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Bases de Datos</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 83%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h3 class="skill-category">HERRAMIENTAS</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-name">Git & GitHub</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">VS Code</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 94%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Webpack & Build Tools</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div id="starfield-contact"></div>
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">// </span>CONTACTO
+            </h2>
+            
+            <div class="contact-wrapper">
+                <div class="contact-form-container">
+                    <div class="terminal-header">
+                        <span class="terminal-title">$ CONTACT_FORM.EXE</span>
+                        <div class="terminal-buttons">
+                            <span class="btn-min">_</span>
+                            <span class="btn-max">□</span>
+                            <span class="btn-close">×</span>
+                        </div>
+                    </div>
+                    
+                    <div class="terminal-body">
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">❯ nombre:</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">❯ email:</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">❯ mensaje:</label>
+                                <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tu mensaje aquí..." rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-terminal btn-submit">
+                                <span class="btn-content">→ ENVIAR</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                <span class="footer-prefix">$ </span>
+                © 2024 Lucia Benitez | Retro Portfolio v2.0
+            </p>
+            <div class="social-links">
+                <a href="#" class="social-link" title="GitHub">GH</a>
+                <a href="#" class="social-link" title="LinkedIn">LI</a>
+                <a href="#" class="social-link" title="Twitter">TW</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="starfield.js"></script>
+    <script src="contact-starfield.js"></script>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
