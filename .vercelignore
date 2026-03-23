@@ -1,7 +1,18 @@
-# No ignorar carpetas de modelos
+# Git history (no incluir)
+.git
+.gitignore
+
+# Node modules (si existen)
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Sistema
+.DS_Store
+.env.local
+*.log
+
+# Mantener modelos optimizados
 !sci-fi_computer/
-!commodore_64__computer_full_pack/
 !computer__desk/
-!sci-fi_computer/**
-!commodore_64__computer_full_pack/**
-!computer__desk/**
+!commodore_64__computer_full_pack/
