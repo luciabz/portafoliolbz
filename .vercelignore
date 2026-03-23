@@ -1,0 +1,7 @@
+# No ignorar carpetas de modelos
+!sci-fi_computer/
+!commodore_64__computer_full_pack/
+!computer__desk/
+!sci-fi_computer/**
+!commodore_64__computer_full_pack/**
+!computer__desk/**
