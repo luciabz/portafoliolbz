@@ -343,28 +343,67 @@
     <script src="script.js" defer></script>
     
     <script>
-        // Handle model-viewer loading
-        document.addEventListener('DOMContentLoaded', function() {
+        // Robust model-viewer loader
+        function initModelViewer() {
             const modelViewer = document.getElementById('hero-model-viewer');
             const loader = document.getElementById('model-loader');
             
-            if (!modelViewer || !loader) return;
-            
-            // Hide loader when model-viewer has rendered something
-            const hideLoader = () => {
-                loader.style.display = 'none';
-            };
-            
-            // Listen for model ready
-            if (modelViewer.loaded) {
-                hideLoader();
-            } else {
-                modelViewer.addEventListener('load', hideLoader, { once: true });
+            if (!modelViewer || !loader) {
+                console.warn('Model viewer or loader not found');
+                return;
             }
             
-            // Force remove loader after 2 seconds regardless
-            setTimeout(hideLoader, 2000);
-        });
+            console.log('Initializing model viewer...');
+            
+            // Function to hide loader
+            const hideLoader = () => {
+                if (loader.style.display !== 'none') {
+                    console.log('Model ready - hiding loader');
+                    loader.style.display = 'none';
+                }
+            };
+            
+            // Try to hide if already loaded
+            if (modelViewer.loaded) {
+                hideLoader();
+                return;
+            }
+            
+            // Listen for load event
+            const loadHandler = () => {
+                console.log('Model load event fired');
+                hideLoader();
+                modelViewer.removeEventListener('load', loadHandler);
+            };
+            
+            modelViewer.addEventListener('load', loadHandler);
+            
+            // Listen for render (more reliable for WebGL)
+            const renderHandler = () => {
+                if (modelViewer.loaded) {
+                    hideLoader();
+                    modelViewer.removeEventListener('render', renderHandler);
+                }
+            };
+            
+            modelViewer.addEventListener('render', renderHandler);
+            
+            // Fallback: hide after 3 seconds max
+            setTimeout(() => {
+                hideLoader();
+                console.log('Loader timeout reached');
+            }, 3000);
+        }
+        
+        // Wait for DOM ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initModelViewer);
+        } else {
+            initModelViewer();
+        }
+        
+        // Extra safety: also initialize on window load
+        window.addEventListener('load', initModelViewer);
     </script>
 </body>
 </html>

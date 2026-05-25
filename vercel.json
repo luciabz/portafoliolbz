@@ -3,41 +3,45 @@
   "outputDirectory": ".",
   "headers": [
     {
-      "source": "/sci-fi_computer/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        },
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        },
-        {
-          "key": "Content-Type",
-          "value": "application/octet-stream"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)\\.gltf$",
+      "source": "/sci-fi_computer/(.*\\.gltf)$",
       "headers": [
         {
           "key": "Content-Type",
           "value": "model/gltf+json"
         },
         {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        },
+        {
           "key": "Access-Control-Allow-Origin",
           "value": "*"
         }
       ]
     },
     {
-      "source": "/(.*)\\.bin$",
+      "source": "/sci-fi_computer/(.*\\.bin)$",
       "headers": [
         {
           "key": "Content-Type",
           "value": "application/octet-stream"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/sci-fi_computer/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
         },
         {
           "key": "Access-Control-Allow-Origin",
