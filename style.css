@@ -424,7 +424,7 @@ model-viewer {
     --progress-bar-color: var(--color-primary);
 }
 
-/* Model Loader */
+/* Model Loader - Optimized */
 .model-loader {
     position: absolute;
     top: 50%;
@@ -442,6 +442,8 @@ model-viewer {
     letter-spacing: 2px;
     padding: 40px;
     text-align: center;
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
 }
 
 .model-loader p {
