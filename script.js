@@ -100,5 +100,88 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // ========== TERMINAL ACTION BUTTONS ==========
+    const btnPrimary = document.querySelector('.btn-primary');
+    const btnSecondary = document.querySelector('.btn-secondary');
+    
+    // Botón ENVIAR MENSAJE
+    if (btnPrimary) {
+        btnPrimary.addEventListener('click', function() {
+            const contactSection = document.querySelector('#contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+    
+    // Botón DESCARGAR CV
+    if (btnSecondary) {
+        btnSecondary.addEventListener('click', function() {
+            // Descargar el archivo LuciaBenitezCV.pdf
+            const cvLink = document.createElement('a');
+            cvLink.href = 'LuciaBenitezCV.pdf';
+            cvLink.download = 'Lucia_Benitez_CV.pdf';
+            cvLink.click();
+        });
+    }
+    
     console.log('🎮 Retro Portfolio v2.0 Inicializado');
+});
+// ═══════════════════════════════
+// DIAGNOSTICS TABS
+// ═══════════════════════════════
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    const tabs = document.querySelectorAll('.diagnostics-tab');
+    const contents = document.querySelectorAll('.tabs-content');
+
+    tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+
+            // 1. Sacar active de todos los tabs
+            tabs.forEach(function(t) { t.classList.remove('active'); });
+
+            // 2. Sacar active de todos los contenidos
+            contents.forEach(function(c) { c.classList.remove('active'); });
+
+            // 3. Poner active en el tab clickeado
+            tab.classList.add('active');
+
+            // 4. Mostrar el contenido correspondiente
+            const target = tab.getAttribute('data-tab');
+            const targetContent = document.querySelector('[data-content="' + target + '"]');
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+
+            // 5. Animar las barras del tab nuevo desde 0
+            if (targetContent) {
+                const bars = targetContent.querySelectorAll('.skill-bar');
+                bars.forEach(function(bar) {
+                    const finalWidth = bar.style.width;
+                    bar.style.width = '0%';
+                    bar.style.transition = 'none';
+                    setTimeout(function() {
+                        bar.style.transition = 'width 1.2s cubic-bezier(.4,0,.2,1)';
+                        bar.style.width = finalWidth;
+                    }, 50);
+                });
+            }
+        });
+    });
+
+    // Animar barras del tab inicial (frontend) al cargar la página
+    const initialContent = document.querySelector('.tabs-content.active');
+    if (initialContent) {
+        const bars = initialContent.querySelectorAll('.skill-bar');
+        bars.forEach(function(bar) {
+            const finalWidth = bar.style.width;
+            bar.style.width = '0%';
+            setTimeout(function() {
+                bar.style.width = finalWidth;
+            }, 300);
+        });
+    }
+
 });

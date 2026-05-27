@@ -39,10 +39,10 @@
                 <span></span>
             </button>
             <ul class="nav-links" id="nav-menu">
-                <li><a href="#hero" class="nav-link">// INICIO</a></li>
-                <li><a href="#projects" class="nav-link">// PROYECTOS</a></li>
-                <li><a href="#skills" class="nav-link">// SKILLS</a></li>
-                <li><a href="#contact" class="nav-link">// CONTACTO</a></li>
+                <li><a href="#hero" class="nav-link">INICIO</a></li>
+                <li><a href="#projects" class="nav-link">PROYECTOS</a></li>
+                <li><a href="#skills" class="nav-link">SKILLS</a></li>
+                <li><a href="#contact" class="nav-link">CONTACTO</a></li>
                 <li class="language-selector-container">
                     <select id="language-selector" class="language-selector">
                         <option value="es">ES</option>
@@ -60,50 +60,80 @@
                 <div class="terminal-header">
                     <span class="terminal-title">$ TERMINAL_INIT.EXE</span>
                     <div class="terminal-buttons">
-                        <span class="btn-min">_</span>
+                        <span class="btn-min">-</span>
                         <span class="btn-max">□</span>
                         <span class="btn-close">×</span>
                     </div>
                 </div>
                 
                 <div class="terminal-body">
-                    <p class="terminal-line">
-                        <span class="prompt">❯</span>
-                        <span class="typing-text">Welcome to Lucia Benitez Portfolio</span>
-                        <span class="cursor">|</span>
-                    </p>
+                    <div class="terminal-main-content">
+                        <img src="perfil.png" alt="Lucia Benitez - Perfil" class="profile-image-inline">
+                        <div class="terminal-text-content">
+                            <div class="system-header">
+                                <span class="system-name">LUCIA_OS.exe</span>
+                                <span class="system-pid">[ PID: 1337 ]</span>
+                            </div>
+                            
+                            <p class="terminal-line">
+                                <span class="prompt">></span>
+                                <span>BOOTING LUCIA_OS v2.1...</span>
+                                <span class="status-ok">[ OK ]</span>
+                            </p>
                     
                     <p class="terminal-line">
-                        <span class="prompt">❯</span>
-                        <span class="text-accent">Role:</span> Web Developer
+                        <span class="prompt">></span>
+                        <span>LOADING USER_PROFILE: lucia.benítez</span>
+                        <span class="status-ok">[ OK ]</span>
                     </p>
                     
-                    <p class="terminal-line">
-                        <span class="prompt">❯</span>
-                        <span class="text-accent">Location:</span> Argentina
-                    </p>
+                 
                     
-                    <p class="terminal-line">
-                        <span class="prompt">❯</span>
-                        <span class="text-accent">Specialization:</span> Frontend & Design
-                    </p>
+                   
                     
                     <p class="terminal-line empty">
-                        <span class="prompt">❯</span>
+                        <span class="prompt">></span>
+                    </p>
+                    
+                    <div class="role-title">
+                        <p>FULL_STACK</p>
+                        <p>ENGINEER</p>
+                    </div>
+                    
+                    <p class="terminal-line empty">
+                        <span class="prompt">></span>
                     </p>
                     
                     <p class="terminal-line description">
-                        Creando experiencias digitales innovadoras desde la nostalgia del código retro. 
-                        Apasionada por HTML5, CSS3, JavaScript y diseño responsivo con sabor vintage.
+
+                        Bienvenido a Lucia Benitez Portfolio,
+                        Diseño experiencias que innovan. Código que corre más rápido,
+                        Obsesionada por cada píxel,cada animación, cada milisegundo de rendimiento.
                     </p>
                     
-                    <p class="terminal-line empty">
-                        <span class="prompt">❯</span>
+                   
+        
+                   
+                   
+
+                  
+                    
+                    <p class="terminal-line">
+                        <span class="prompt">></span>
+                        <span>AWAITING COMMAND</span>
+                        <span class="cursor-blink">█</span>
                     </p>
                     
-                    <button class="btn-terminal btn-contact">
-                        <span class="btn-content">→ ENVIAR MENSAJE</span>
-                    </button>
+                            <div class="terminal-actions">
+                                <button class="btn-terminal btn-primary">
+                                    <span class="btn-content">→ ENVIAR MENSAJE</span>
+                                </button>
+                                <button class="btn-terminal btn-secondary">
+                                    <span class="btn-content">↓ DESCARGAR CV</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -122,6 +152,35 @@
                     loading="eager"
                     style="width: 100%; height: 100%; background: transparent; display: block;">
                 </model-viewer>
+                
+                <!-- SYS_CAPABILITIES Panel -->
+                <div class="sys-capabilities">
+                    <div class="terminal-header">
+                        <span class="terminal-title">// SYS_CAPABILITIES</span>
+                    </div>
+                    <div class="capabilities-body">
+                        <div class="capability-item">
+                            <span class="cap-name">REACT.JS</span>
+                            <span class="cap-bar">████████████░░░░</span>
+                            <span class="cap-percent">[ 90% ]</span>
+                        </div>
+                        <div class="capability-item">
+                            <span class="cap-name">NEXT.JS</span>
+                            <span class="cap-bar">███████████░░░░░</span>
+                            <span class="cap-percent">[ 87% ]</span>
+                        </div>
+                        <div class="capability-item">
+                            <span class="cap-name">TAILWIND CSS</span>
+                            <span class="cap-bar">██████████░░░░░░</span>
+                            <span class="cap-percent">[ 85% ]</span>
+                        </div>
+                        <div class="capability-item">
+                            <span class="cap-name">GSAP ANIMATION</span>
+                            <span class="cap-bar">████████░░░░░░░░</span>
+                            <span class="cap-percent">[ 78% ]</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -130,61 +189,173 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-prefix">// </span>PROYECTOS
+                <span class="role-title"><span>PROYECTOS
             </h2>
+            <p class="projects-status">➤ LISTING ACTIVE INITIATIVES... [ STATUS: ONLINE ]</p>
             
             <div class="projects-grid">
+                <!-- PROJECT 001 -->
                 <div class="project-card">
-                    <div class="card-header">
-                        <span class="card-icon">▥</span>
-                        <span class="card-title">Proyecto 1</span>
-                    </div>
-                    <div class="card-body">
-                        <p>Aplicación web interactiva que demuestra habilidades en JavaScript y diseño responsivo con estética retro.</p>
-                        <div class="tags">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">JavaScript</span>
+                    <div class="project-card-inner">
+                        <!-- FRONT -->
+                        <div class="project-card-front">
+                            <div class="card-header">
+                                <span class="card-icon">Project_Status.sys</span>
+                                <span class="card-id">[ ID: 001 ]</span>
+                            </div>
+                            <div class="card-image">
+                                <img src="frac.png" alt="FRACTAL_ART Project Preview">
+                            </div>
+                            <div class="card-body">
+                                <p class="card-project-title">FRACTAL_ART</p>
+                                <p>Arte generativo en tiempo real desde el navegador.</p>
+                                <div class="tags">
+                                    <span class="tag">[ HTML ]</span>
+                                    <span class="tag">[ CSS ]</span>
+                                    <span class="tag">[ JAVASCRIPT ]</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="card-link">→ INITIATE_VIEW</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">→ Ver Proyecto</a>
+
+                        <!-- BACK -->
+                        <div class="project-card-back">
+                            <div class="card-header">
+                                <span class="card-icon">Project_Data.sys</span>
+                                <span class="card-id">[ ID: 001 ]</span>
+                            </div>
+                            <div class="card-back-body">
+                                <p class="back-title">fractARt</p>
+                                <p class="back-description">Sistema web para explorar y controlar fractales matemáticos con parámetros en tiempo real. Construido con Canvas API puro, sin frameworks. Cada control que el usuario mueve cambia el resultado visual al instante.</p>
+                                
+                                <p class="back-section">// STACK_USED:</p>
+                                <div class="tags back-tags">
+                                    <span class="tag">[ HTML5 ]</span>
+                                    <span class="tag">[ CSS3 ]</span>
+                                    <span class="tag">[ JAVASCRIPT ]</span>
+                                    <span class="tag">[ CANVAS API ]</span>
+                                </div>
+
+                                <p class="back-status">// STATUS: [ COMPLETED ]</p>
+
+                                <div class="back-buttons">
+                                    <a href="https://fractartt.netlify.app/dispositivo" target="_blank" class="back-btn">[ → LAUNCH_PROJECT ]</a>
+                                    <a href="https://github.com/luciabz/fractARt" target="_blank" class="back-btn">[ → VIEW_CODE ]</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
+                <!-- PROJECT 002 -->
                 <div class="project-card">
-                    <div class="card-header">
-                        <span class="card-icon">▥</span>
-                        <span class="card-title">Proyecto 2</span>
-                    </div>
-                    <div class="card-body">
-                        <p>Plataforma full-stack con backend integrado, demostrando experiencia en desarrollo completo.</p>
-                        <div class="tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
+                    <div class="project-card-inner">
+                        <!-- FRONT -->
+                        <div class="project-card-front">
+                            <div class="card-header">
+                                <span class="card-icon">Project_Status.sys</span>
+                                <span class="card-id">[ ID: 002 ]</span>
+                            </div>
+                            <div class="card-image">
+                                <img src="invitacion.png" alt="INVITACION_XV Project Preview">
+                            </div>
+                            <div class="card-body">
+                                <p class="card-project-title">INVITACION_XV</p>
+                                <p>Experiencia web interactiva para una celebración de 15.</p>
+                                <div class="tags">
+                                    <span class="tag">[ REACT ]</span>
+                                    <span class="tag">[ TAILWIND ]</span>
+                                    <span class="tag">[ REDUX ]</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="card-link">→ INITIATE_VIEW</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">→ Ver Proyecto</a>
+
+                        <!-- BACK -->
+                        <div class="project-card-back">
+                            <div class="card-header">
+                                <span class="card-icon">Project_Data.sys</span>
+                                <span class="card-id">[ ID: 002 ]</span>
+                            </div>
+                            <div class="card-back-body">
+                                <p class="back-title">InvitacionDigital</p>
+                                <p class="back-description">Aplicación web con cuenta regresiva en tiempo real, confirmación de asistencia con manejo de estado global y galería de fotos. Diseñada para que cualquier invitado, sin importar edad o dispositivo, la usara sin pensar.</p>
+                                
+                                <p class="back-section">// STACK_USED:</p>
+                                <div class="tags back-tags">
+                                    <span class="tag">[ REACT ]</span>
+                                    <span class="tag">[ VITE ]</span>
+                                    <span class="tag">[ TAILWIND ]</span>
+                                    <span class="tag">[ REDUX ]</span>
+                                </div>
+
+                                <p class="back-status">// STATUS: [ COMPLETED ]</p>
+
+                                <div class="back-buttons">
+                                    <a href="https://victoria-mis-xv.netlify.app" target="_blank" class="back-btn">[ → LAUNCH_PROJECT ]</a>
+                                    <a href="https://github.com/luciabz/InvitacionDigital" target="_blank" class="back-btn">[ → VIEW_CODE ]</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
+                <!-- PROJECT 003 -->
                 <div class="project-card">
-                    <div class="card-header">
-                        <span class="card-icon">▥</span>
-                        <span class="card-title">Proyecto 3</span>
-                    </div>
-                    <div class="card-body">
-                        <p>Aplicación móvil responsiva con características avanzadas y optimización de rendimiento máximo.</p>
-                        <div class="tags">
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">API REST</span>
-                            <span class="tag">PWA</span>
+                    <div class="project-card-inner">
+                        <!-- FRONT -->
+                        <div class="project-card-front">
+                            <div class="card-header">
+                                <span class="card-icon">Project_Status.sys</span>
+                                <span class="card-id">[ ID: 003 ]</span>
+                            </div>
+                            <div class="card-image">
+                                <img src="finanzas.png" alt="AHORRA_MAS Project Preview">
+                            </div>
+                            <div class="card-body">
+                                <p class="card-project-title">AHORRA_MAS</p>
+                                <p>App fullstack de finanzas personales sin fricción.</p>
+                                <div class="tags">
+                                    <span class="tag">[ REACT ]</span>
+                                    <span class="tag">[ TYPESCRIPT ]</span>
+                                    <span class="tag">[ API REST ]</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="card-link">→ INITIATE_VIEW</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">→ Ver Proyecto</a>
+
+                        <!-- BACK -->
+                        <div class="project-card-back">
+                            <div class="card-header">
+                                <span class="card-icon">Project_Data.sys</span>
+                                <span class="card-id">[ ID: 003 ]</span>
+                            </div>
+                            <div class="card-back-body">
+                                <p class="back-title">AHORRA-MAS</p>
+                                <p class="back-description">Aplicación web fullstack con API propia para el seguimiento de ahorros personales. El foco está en mostrar el progreso del ahorro, no en registrar gastos. Construida con React, TypeScript y arquitectura de capas separadas.</p>
+                                
+                                <p class="back-section">// STACK_USED:</p>
+                                <div class="tags back-tags">
+                                    <span class="tag">[ REACT ]</span>
+                                    <span class="tag">[ TYPESCRIPT ]</span>
+                                    <span class="tag">[ JAVASCRIPT ]</span>
+                                    <span class="tag">[ VITE ]</span>
+                                </div>
+
+                                <p class="back-status">// STATUS: [ COMPLETED ]</p>
+
+                                <div class="back-buttons">
+                                    <a href="https://ahorra-mas.vercel.app" target="_blank" class="back-btn">[ → LAUNCH_PROJECT ]</a>
+                                    <a href="https://github.com/luciabz/AHORRA-MAS" target="_blank" class="back-btn">[ → VIEW_CODE ]</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -195,91 +366,420 @@
     <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-prefix">// </span>HABILIDADES TÉCNICAS
+                <span class="role-title"> DIAGNOSTICS </span>
             </h2>
             
-            <div class="skills-grid">
-                <div class="skill-group">
-                    <h3 class="skill-category">FRONTEND</h3>
-                    <div class="skill-bars">
-                        <div class="skill-item">
-                            <div class="skill-name">HTML5</div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 95%"></div>
+            <div class="terminal-section">
+                <p class="terminal-line">
+                    <span class="prompt">></span>
+                    <span class="command">RUNNING DIAGNOSTICS_V2.0</span>
+                </p>
+                <p class="terminal-line">
+                    <span class="prompt">$</span>
+                    <span class="stack-query">load --module SKILL_CHECK --user lucia.dev</span>
+                </p>
+
+                <!-- TABS CLICKEABLES -->
+                <div class="diagnostics-tabs">
+                    <button class="diagnostics-tab active" data-tab="frontend">
+                        <span class="tab-label">// FRONTEND</span>
+                    </button>
+                    <button class="diagnostics-tab" data-tab="backend">
+                        <span class="tab-label">// BACKEND</span>
+                    </button>
+                    <button class="diagnostics-tab" data-tab="database">
+                        <span class="tab-label">// DB & TESTING</span>
+                    </button>
+                    <button class="diagnostics-tab" data-tab="devops">
+                        <span class="tab-label">// DEVOPS</span>
+                    </button>
+                    <button class="diagnostics-tab" data-tab="stack">
+                        <span class="tab-label">// STACK_INDEX</span>
+                    </button>
+                </div>
+
+                <!-- TAB CONTENT: FRONTEND -->
+                <div class="tabs-content active" data-content="frontend">
+                    <p class="diagnostic-label">// FRONTEND_MODULES</p>
+                    <div class="skills-grid">
+                        <div class="skill-row">
+                            <span class="skill-name">JAVASCRIPT</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 90%; --bar-color: #00ff41;"></div>
                             </div>
+                            <span class="skill-percent">90%</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-name">CSS3</div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 92%"></div>
+                        <div class="skill-row">
+                            <span class="skill-name">TYPESCRIPT</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 82%; --bar-color: #00ff41;"></div>
                             </div>
+                            <span class="skill-percent">82%</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-name">JavaScript</div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 88%"></div>
+                        <div class="skill-row">
+                            <span class="skill-name">REACT / NEXT.JS</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 88%; --bar-color: #00ff41;"></div>
                             </div>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">ASTRO</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 70%; --bar-color: #00ff41;"></div>
+                            </div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">REDUX</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 78%; --bar-color: #00ff41;"></div>
+                            </div>
+                            <span class="skill-percent">78%</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">TAILWIND CSS</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 88%; --bar-color: #00ff41;"></div>
+                            </div>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">HTML5 / CSS3</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 95%; --bar-color: #00ff41;"></div>
+                            </div>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">CANVAS API / 3D</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 75%; --bar-color: #00ff41;"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="skill-group">
-                    <h3 class="skill-category">BACKEND</h3>
-                    <div class="skill-bars">
-                        <div class="skill-item">
-                            <div class="skill-name">Node.js</div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 85%"></div>
+                <!-- TAB CONTENT: BACKEND -->
+                <div class="tabs-content" data-content="backend">
+                    <p class="diagnostic-label">// BACKEND_MODULES</p>
+                    <div class="skills-grid">
+                        <div class="skill-row">
+                            <span class="skill-name">NODE.JS / EXPRESS</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 80%; --bar-color: #00c3ff;"></div>
                             </div>
+                            <span class="skill-percent">80%</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-name">Python</div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 80%"></div>
+                        <div class="skill-row">
+                            <span class="skill-name">NESTJS</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 75%; --bar-color: #00c3ff;"></div>
                             </div>
+                            <span class="skill-percent">75%</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-name">Bases de Datos</div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 83%"></div>
+                        <div class="skill-row">
+                            <span class="skill-name">FLASK</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 65%; --bar-color: #00c3ff;"></div>
                             </div>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">REST APIs</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 85%; --bar-color: #00c3ff;"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">MICROSERVICIOS</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 75%; --bar-color: #00c3ff;"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">JWT / AUTH</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 78%; --bar-color: #00c3ff;"></div>
+                            </div>
+                            <span class="skill-percent">78%</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="skill-group">
-                    <h3 class="skill-category">HERRAMIENTAS</h3>
-                    <div class="skill-bars">
-                        <div class="skill-item">
-                            <div class="skill-name">Git & GitHub</div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 90%"></div>
+                <!-- TAB CONTENT: DATABASE & TESTING -->
+                <div class="tabs-content" data-content="database">
+                    <p class="diagnostic-label">// DATABASE & TESTING</p>
+                    <div class="skills-grid">
+                        <div class="skill-row">
+                            <span class="skill-name">POSTGRESQL</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 78%; --bar-color: #a855f7;"></div>
                             </div>
+                            <span class="skill-percent">78%</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-name">VS Code</div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 94%"></div>
+                        <div class="skill-row">
+                            <span class="skill-name">MYSQL</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 72%; --bar-color: #a855f7;"></div>
                             </div>
+                            <span class="skill-percent">72%</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-name">Webpack & Build Tools</div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 75%"></div>
+                        <div class="skill-row">
+                            <span class="skill-name">MONGODB</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 70%; --bar-color: #a855f7;"></div>
                             </div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">JEST</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 74%; --bar-color: #a855f7;"></div>
+                            </div>
+                            <span class="skill-percent">74%</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">PYTHON / JAVA / C</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 70%; --bar-color: #a855f7;"></div>
+                            </div>
+                            <span class="skill-percent">70%</span>
                         </div>
                     </div>
+                </div>
+
+                <!-- TAB CONTENT: DEVOPS -->
+                <div class="tabs-content" data-content="devops">
+                    <p class="diagnostic-label">// DEVOPS & METODOLOGIAS</p>
+                    <div class="skills-grid">
+                        <div class="skill-row">
+                            <span class="skill-name">GIT / GITHUB</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 90%; --bar-color: #f59e0b;"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">VERCEL / HEROKU</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 80%; --bar-color: #f59e0b;"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">AGILE / SCRUM</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 85%; --bar-color: #f59e0b;"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">CLEAN ARCHITECTURE</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 78%; --bar-color: #f59e0b;"></div>
+                            </div>
+                            <span class="skill-percent">78%</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">SOLID PRINCIPLES</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" style="width: 76%; --bar-color: #f59e0b;"></div>
+                            </div>
+                            <span class="skill-percent">76%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB CONTENT: STACK INDEX -->
+                <div class="tabs-content" data-content="stack">
+                    <p class="terminal-line" style="margin-bottom: 25px;">
+                        <span class="prompt">$</span>
+                        <span class="stack-query">query --type tools --filter active</span>
+                    </p>
+                    <div class="stack-tags-container">
+                        <div class="stack-group" style="--group-color: #00ff41">
+                            <span class="tag">JAVASCRIPT</span>
+                            <span class="tag">TYPESCRIPT</span>
+                            <span class="tag">REACT</span>
+                            <span class="tag">NEXT.JS</span>
+                            <span class="tag">ASTRO</span>
+                            <span class="tag">REDUX</span>
+                            <span class="tag">TAILWIND</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                        </div>
+                        <div class="stack-group" style="--group-color: #00c3ff">
+                            <span class="tag">NODE.JS</span>
+                            <span class="tag">EXPRESS</span>
+                            <span class="tag">NESTJS</span>
+                            <span class="tag">FLASK</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">MICROSERVICIOS</span>
+                            <span class="tag">JWT</span>
+                        </div>
+                        <div class="stack-group" style="--group-color: #a855f7">
+                            <span class="tag">POSTGRESQL</span>
+                            <span class="tag">MYSQL</span>
+                            <span class="tag">MONGODB</span>
+                            <span class="tag">JEST</span>
+                            <span class="tag">PYTHON</span>
+                            <span class="tag">JAVA</span>
+                            <span class="tag">C</span>
+                        </div>
+                        <div class="stack-group" style="--group-color: #f59e0b">
+                            <span class="tag">GIT</span>
+                            <span class="tag">GITHUB</span>
+                            <span class="tag">VERCEL</span>
+                            <span class="tag">HEROKU</span>
+                            <span class="tag">AGILE</span>
+                            <span class="tag">SCRUM</span>
+                            <span class="tag">CLEAN ARCH</span>
+                            <span class="tag">SOLID</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="terminal-line" style="margin-top: 30px;">
+                    <span class="prompt">$</span>
+                    <span class="cursor-terminal">█</span>
+                </p>
+                <div class="system-status-bar">
+                    <span>[ SYSTEM_STATUS: <span class="status-online">ONLINE</span> ] — [ ALL MODULES LOADED ]</span>
+                    <span class="cursor-blinking">█</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- EXPERIENCE & EDUCATION SECTION -->
+    <section id="experience" class="experience-education-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="role-title">TRAYECTORIA</span>
+            </h2>
+            
+            <div class="experience-education-grid">
+                <!-- EXPERIENCE COLUMN -->
+                <div class="experience-column">
+                    <div class="terminal-section">
+                        <p class="terminal-line">
+                            <span class="prompt">></span>
+                            <span class="command">LOADING EXPERIENCE_LOG</span>
+                        </p>
+                        <p class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="stack-query">cat /var/log/experience.log</span>
+                        </p>
+
+                        <!-- EXPERIENCE 1 -->
+                        <div class="experience-entry" style="--entry-color: #00ff41;">
+                            <div class="exp-line"></div>
+                            <div class="exp-content">
+                                <p class="entry-title">FRONTEND DEVELOPER</p>
+                                <p class="entry-company">SERVICIOS URBANOS S.A. [ POSADAS, MISIONES ]</p>
+                                <p class="entry-date">[ MAY 2025 → PRESENT ]</p>
+                                <ul class="entry-achievements">
+                                    <li>React, Vite, Redux y Tailwind CSS — mejora velocidad de carga <span class="highlight">~30%</span></li>
+                                    <li>Integración APIs REST — reducción errores cliente-servidor <span class="highlight">~25%</span></li>
+                                    <li>Optimización con lazy loading y code splitting</li>
+                                    <li>Mejoras UX — reducción de tasa de abandono</li>
+                                    <li>Clean Architecture — aumento de mantenibilidad del código</li>
+                                    <li>Agile/Scrum — <span class="highlight">+90%</span> de entregas en tiempo</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- EXPERIENCE 2 -->
+                        <div class="experience-entry" style="--entry-color: #00c3ff;">
+                            <div class="exp-line"></div>
+                            <div class="exp-content">
+                                <p class="entry-title">FULL STACK DEVELOPER</p>
+                                <p class="entry-company">BYTEMATE [ POSADAS, MISIONES ]</p>
+                                <p class="entry-date">[ SEP 2023 → MAY 2024 ]</p>
+                                <ul class="entry-achievements">
+                                    <li>Plataforma web con arquitectura de microservicios</li>
+                                    <li>Backend Node.js, Express y NestJS — múltiples endpoints concurrentes</li>
+                                    <li>APIs REST — optimización tiempos de respuesta <span class="highlight">~20%</span></li>
+                                    <li>Modelado de bases de datos PostgreSQL y MongoDB</li>
+                                    <li>Autenticación JWT — mejora de seguridad del sistema</li>
+                                    <li>Pruebas unitarias e integración con Jest</li>
+                                    <li>Deploys en entornos productivos</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p class="terminal-line" style="margin-top: 30px;">
+                            <span class="prompt">$</span>
+                            <span class="cursor-terminal">█</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- EDUCATION COLUMN -->
+                <div class="education-column">
+                    <div class="terminal-section">
+                        <p class="terminal-line">
+                            <span class="prompt">></span>
+                            <span class="command">MOUNTING ACADEMIC_MODULES</span>
+                        </p>
+                        <p class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="stack-query">ls -la /education/</span>
+                        </p>
+
+                        <!-- EDUCATION 1 -->
+                        <div class="education-module" style="--module-color: #00ff41;">
+                            <div class="edu-line"></div>
+                            <div class="edu-content">
+                                <p class="module-title">INGENIERIA EN SISTEMAS DE INFORMACION</p>
+                                <p class="module-institution">UNIVERSIDAD DE LA CUENCA DEL PLATA</p>
+                                <p class="module-location">POSADAS, MISIONES, ARGENTINA</p>
+                                <p class="module-date">[ 2023 → PRESENT ]</p>
+                                <div class="module-badges">
+                                    <span class="badge badge-in-progress"><span class="badge-dot"></span> IN_PROGRESS</span>
+                                    <span class="badge badge-gpa">GPA: 8.0 / 10</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- EDUCATION 2 -->
+                        <div class="education-module" style="--module-color: #a855f7;">
+                            <div class="edu-line"></div>
+                            <div class="edu-content">
+                                <p class="module-title">BOOTCAMP BACKEND</p>
+                                <p class="module-institution">SILICON MISIONES</p>
+                                <p class="module-location">POSADAS, MISIONES, ARGENTINA</p>
+                                <p class="module-date">[ 2024 ]</p>
+                                <div class="module-badges">
+                                    <span class="badge badge-completed">COMPLETED</span>
+                                </div>
+                                <div class="module-stack">
+                                    <span class="tag">NODE.JS</span>
+                                    <span class="tag">EXPRESS</span>
+                                    <span class="tag">POSTGRESQL</span>
+                                    <span class="tag">DEPLOY</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="terminal-line" style="margin-top: 30px;">
+                            <span class="prompt">$</span>
+                            <span class="cursor-terminal">█</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="contact" class="contact">
         <div id="starfield-contact"></div>
         <div class="container">
             <h2 class="section-title">
-                <span class="title-prefix">// </span>CONTACTO
+                <span class="role-title">CONTACTO</span>
             </h2>
             
             <div class="contact-wrapper">
