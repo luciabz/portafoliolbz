@@ -2271,6 +2271,11 @@ model-viewer {
         --gap: 12px;
     }
 
+    /* Con una tarjeta a la vez, el recorrido se hace más rápido */
+    .projects-grid {
+        animation-duration: 30s;
+    }
+
     .project-card {
         padding: 12px;
         border: 2px solid var(--color-secondary);
