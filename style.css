@@ -728,7 +728,7 @@ model-viewer {
 
 /* Sección Proyectos */
 .projects {
-    padding: 100px 20px;
+    padding: 100px 0;
     background-color: rgba(15, 8, 33, 0.95);
     position: relative;
     z-index: 0;
@@ -747,9 +747,12 @@ model-viewer {
 
 .projects-carousel {
     --visible: 3;
-    --gap: 40px;
-    max-width: 1400px;
-    margin: 0 auto;
+    --gap: 24px;
+    /* Sale del .container y ocupa todo el ancho de la pantalla */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 0 var(--gap);
+    box-sizing: border-box;
     overflow: hidden;
     container-type: inline-size;
 }
@@ -757,7 +760,7 @@ model-viewer {
 .projects-grid {
     display: flex;
     width: max-content;
-    animation: projects-scroll 40s linear infinite;
+    animation: projects-scroll 65s linear infinite;
 }
 
 .projects-carousel:hover .projects-grid {
@@ -847,7 +850,8 @@ model-viewer {
 
 .card-image {
     width: 100%;
-    height: 250px;
+    /* Misma proporción que las capturas de los proyectos (~2:1) para que no se recorten */
+    aspect-ratio: 2 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -860,7 +864,42 @@ model-viewer {
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+}
+
+/* Fotos de cada proyecto: se apilan y solo se ve la activa (script.js las rota) */
+.card-slider img {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.card-slider img.active {
+    opacity: 1;
+}
+
+.card-slider-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 2;
+}
+
+.card-slider-dot {
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--color-primary);
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+.card-slider-dot.active {
+    background: var(--color-primary);
+    box-shadow: var(--shadow-glow);
 }
 
 .card-image-placeholder {
@@ -1865,7 +1904,7 @@ model-viewer {
     /* Projects Section */
     .projects-carousel {
         --visible: 2;
-        --gap: 20px;
+        --gap: 16px;
     }
 
     .project-card {
@@ -2229,7 +2268,7 @@ model-viewer {
 
     .projects-carousel {
         --visible: 1;
-        --gap: 15px;
+        --gap: 12px;
     }
 
     .project-card {
