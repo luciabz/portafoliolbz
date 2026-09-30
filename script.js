@@ -47,31 +47,57 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.contact-form');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            
-            const name = this.querySelector('#name').value;
-            const email = this.querySelector('#email').value;
-            const message = this.querySelector('#message').value;
-            
-            if (name && email && message) {
-                // Simulación de envío
-                const submitBtn = this.querySelector('.btn-submit');
-                const originalText = submitBtn.textContent;
-                
-                submitBtn.textContent = '→ ENVIADO ✓';
-                submitBtn.style.pointerEvents = 'none';
-                submitBtn.style.opacity = '0.6';
-                
-                setTimeout(() => {
-                    this.reset();
-                    submitBtn.textContent = originalText;
-                    submitBtn.style.pointerEvents = 'auto';
-                    submitBtn.style.opacity = '1';
-                }, 2000);
-            } else {
+
+            const name = this.querySelector('#name').value.trim();
+            const email = this.querySelector('#email').value.trim();
+            const message = this.querySelector('#message').value.trim();
+
+            if (!name || !email || !message) {
                 alert('Por favor completa todos los campos');
+                return;
             }
+
+            const submitBtn = this.querySelector('.btn-submit');
+            // Se cambia el texto del span para no romper las traducciones (translations.js)
+            const btnContent = submitBtn.querySelector('.btn-content');
+            const originalText = btnContent.textContent;
+
+            btnContent.textContent = '→ ENVIANDO...';
+            submitBtn.disabled = true;
+            submitBtn.style.pointerEvents = 'none';
+            submitBtn.style.opacity = '0.6';
+
+            let resultText;
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: new FormData(this)
+                });
+                const data = await response.json();
+
+                if (response.ok && data.success) {
+                    resultText = '→ ENVIADO ✓';
+                    this.reset();
+                } else {
+                    resultText = '→ ERROR ✗';
+                    console.error('Web3Forms:', data.message);
+                }
+            } catch (error) {
+                resultText = '→ ERROR ✗';
+                console.error('Web3Forms:', error);
+            }
+
+            btnContent.textContent = resultText;
+
+            setTimeout(() => {
+                btnContent.textContent = originalText;
+                submitBtn.disabled = false;
+                submitBtn.style.pointerEvents = 'auto';
+                submitBtn.style.opacity = '1';
+            }, 2500);
         });
     }
     
@@ -171,7 +197,45 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Animar barras del tab inicial (frontend) al cargar la página
+    // Duplicar las tarjetas de proyectos para que el carrusel se repita sin cortes
+    const projectsTrack = document.querySelector('.projects-grid');
+    if (projectsTrack) {
+        Array.from(projectsTrack.children).forEach(function(card) {
+            const clone = card.cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true');
+            clone.querySelectorAll('a').forEach(function(link) {
+                link.setAttribute('tabindex', '-1');
+            });
+            projectsTrack.appendChild(clone);
+        });
+    }
+
+    // Pasar automáticamente las fotos de cada proyecto dentro de su tarjeta
+    document.querySelectorAll('.card-slider').forEach(function(slider) {
+        const images = slider.querySelectorAll('img');
+        if (images.length < 2) return;
+
+        const dotsContainer = document.createElement('div');
+        dotsContainer.className = 'card-slider-dots';
+        const dots = Array.from(images).map(function(_, i) {
+            const dot = document.createElement('span');
+            dot.className = 'card-slider-dot' + (i === 0 ? ' active' : '');
+            dotsContainer.appendChild(dot);
+            return dot;
+        });
+        slider.appendChild(dotsContainer);
+
+        let current = 0;
+        setInterval(function() {
+            images[current].classList.remove('active');
+            dots[current].classList.remove('active');
+            current = (current + 1) % images.length;
+            images[current].classList.add('active');
+            dots[current].classList.add('active');
+        }, 3000);
+    });
+
+    // Animar barras del tab inicial (stack) al cargar la página
     const initialContent = document.querySelector('.tabs-content.active');
     if (initialContent) {
         const bars = initialContent.querySelectorAll('.skill-bar');

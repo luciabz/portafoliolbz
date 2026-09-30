@@ -744,19 +744,42 @@ model-viewer {
     letter-spacing: 1px;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+
+.projects-carousel {
+    --visible: 3;
+    --gap: 40px;
     max-width: 1400px;
     margin: 0 auto;
-    perspective: 1000px;
+    overflow: hidden;
+    container-type: inline-size;
+}
+
+.projects-grid {
+    display: flex;
+    width: max-content;
+    animation: projects-scroll 40s linear infinite;
+}
+
+.projects-carousel:hover .projects-grid {
+    animation-play-state: paused;
+}
+
+@keyframes projects-scroll {
+    to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .projects-grid {
+        animation: none;
+    }
 }
 
 .project-card {
     perspective: 1000px;
     min-height: 600px;
     position: relative;
+    flex: 0 0 calc((100cqw - (var(--visible) - 1) * var(--gap)) / var(--visible));
+    margin-right: var(--gap);
 }
 
 .project-card-inner {
@@ -838,6 +861,14 @@ model-viewer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.card-image-placeholder {
+    background: repeating-linear-gradient(0deg, var(--bg-secondary) 0 2px, var(--bg-primary) 2px 4px);
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-shadow: var(--shadow-glow);
 }
 
 .card-body {
@@ -1832,9 +1863,9 @@ model-viewer {
     }
 
     /* Projects Section */
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+    .projects-carousel {
+        --visible: 2;
+        --gap: 20px;
     }
 
     .project-card {
@@ -2196,9 +2227,9 @@ model-viewer {
         font-size: 14px;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
+    .projects-carousel {
+        --visible: 1;
+        --gap: 15px;
     }
 
     .project-card {
